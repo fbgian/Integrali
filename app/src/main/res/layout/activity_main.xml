@@ -103,7 +103,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.39"
-        tools:ignore="HardcodedText" />
+        tools:ignore="Autofill,HardcodedText"/>
 
     <ImageView
         android:id="@+id/imageView"
