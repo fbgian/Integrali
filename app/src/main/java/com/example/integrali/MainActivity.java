@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 double a,b;
+                String error = "Inserisci valori validi";
                 int n;
 
                 try {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     b = Double.parseDouble(estrB.getText().toString());
                     n = Integer.parseInt(numint.getText().toString());
                 } catch (Exception e){
-                    risultato.setText("Inserisci valori validi");
+                    risultato.setText(error);
                     return;
                 }
 
