@@ -1,12 +1,10 @@
 <resources>
     <string name="app_name">Proviamo</string>
-    <string name="funzioni_prompt">Scegli una funzione</string>
+    <string name="funzioni_prompt">Scegli un metodo</string>
 
     <string-array name="funzioni">
-        <item>sin(x)</item>
-        <item>cos(x)</item>
-        <item>exp(x)</item>
-        <item>x^2</item>
+        <item>Metodo dei Trapezi</item>
+        <item>Metodo Simpson</item>
 
     </string-array>
 </resources>
