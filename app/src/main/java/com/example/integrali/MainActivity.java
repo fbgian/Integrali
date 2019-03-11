@@ -55,21 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
                 inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
-                e = new ExpressionBuilder(insFunz.getText().toString()).variable("x").build();
 
-                double a = Double.parseDouble(estrA.getText().toString());
-                double b = Double.parseDouble(estrB.getText().toString());
-                int n = Integer.parseInt(numint.getText().toString());
+                a = Double.parseDouble(estrA.getText().toString());
+                b = Double.parseDouble(estrB.getText().toString());
+                n = Integer.parseInt(numint.getText().toString());
 
-                double x = a;
-                double h = (b-a)/n;
-                double s = (f(a)+f(b))/2;
-                for (int i = 0; i<n; i++) {
-                    x += h;
-                    s += f(x);
-                }
-
-                double area = s*h;
 
                 DecimalFormat df = new DecimalFormat("#.######");
                 risultato.setText(df.format(area));
