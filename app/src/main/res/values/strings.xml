@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proviamo</string>
+    <string name="app_name">Integrali</string>
     <string name="funzioni_prompt">Scegli un metodo</string>
 
     <string-array name="funzioni">
