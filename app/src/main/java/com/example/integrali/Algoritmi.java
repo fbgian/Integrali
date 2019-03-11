@@ -1,3 +1,5 @@
+//Copyright GIANCIOTTI SOFTWARE HOUSE 2019
+
 package com.example.integrali;
 
 import net.objecthunter.exp4j.Expression;

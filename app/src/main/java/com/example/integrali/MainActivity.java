@@ -1,5 +1,5 @@
+//Copyright GIANCIOTTI SOFTWARE HOUSE 2019
 package com.example.integrali;
-
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
