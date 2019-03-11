@@ -8,18 +8,19 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/estrB"
-        android:layout_width="100dp"
+        android:id="@+id/insFunz"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="b"
-        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:hint="f(x)"
+        android:inputType="text"
+        android:nextFocusDown="@id/estrA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514"
+        app:layout_constraintVertical_bias="0.39"
         tools:ignore="Autofill,HardcodedText" />
 
     <EditText
@@ -29,8 +30,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="a"
         android:inputType="numberDecimal"
+        android:nextFocusDown="@id/estrB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,14 +43,34 @@
         tools:ignore="Autofill,HardcodedText" />
 
     <EditText
+        android:id="@+id/estrB"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="b"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@id/numint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514"
+        tools:ignore="Autofill,HardcodedText" />
+
+
+    <EditText
         android:id="@+id/numint"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="n"
         android:inputType="number"
+        android:nextFocusDown="@id/calcola"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -89,21 +112,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.277" />
+        app:layout_constraintVertical_bias="0.3" />
 
-    <EditText
-        android:id="@+id/insFunz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="f(x)"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39"
-        tools:ignore="Autofill,HardcodedText"/>
 
     <ImageView
         android:id="@+id/imageView"
