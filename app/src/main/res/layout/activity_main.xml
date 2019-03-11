@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.514"
-        tools:ignore="HardcodedText" />
+        tools:ignore="Autofill,HardcodedText" />
 
     <EditText
         android:id="@+id/estrA"
@@ -37,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.514"
-        tools:ignore="HardcodedText" />
+        tools:ignore="Autofill,HardcodedText" />
 
     <EditText
         android:id="@+id/numint"
@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.514"
-        tools:ignore="HardcodedText" />
+        tools:ignore="Autofill,HardcodedText" />
 
     <Button
         android:id="@+id/calcola"
