@@ -1,4 +1,4 @@
-package com.example.proviamo;
+package com.example.integrali;
 
 import org.junit.Test;
 

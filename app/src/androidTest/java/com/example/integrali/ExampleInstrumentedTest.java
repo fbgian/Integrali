@@ -1,4 +1,4 @@
-package com.example.proviamo;
+package com.example.integrali;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.proviamo", appContext.getPackageName());
+        assertEquals("com.example.integrali", appContext.getPackageName());
     }
 }

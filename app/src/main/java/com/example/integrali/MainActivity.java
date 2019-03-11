@@ -1,4 +1,4 @@
-package com.example.proviamo;
+package com.example.integrali;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -14,10 +14,6 @@ import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
 import java.text.DecimalFormat;
-
-import static java.lang.Math.cos;
-import static java.lang.Math.exp;
-import static java.lang.Math.sin;
 
 public class MainActivity extends AppCompatActivity {
 
