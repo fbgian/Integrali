@@ -1,8 +1,12 @@
 package com.example.integrali;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -65,11 +69,25 @@ public class MainActivity extends AppCompatActivity {
                     default: area=0;
                 }
 
-                DecimalFormat df = new DecimalFormat("#.######");
+                DecimalFormat df = new DecimalFormat("#.000000");
                 risultato.setText(df.format(area));
             }
 
 
+        });
+
+        numint.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId== EditorInfo.IME_ACTION_DONE){
+                    calcola.callOnClick();
+                    InputMethodManager imm = (InputMethodManager)getApplicationContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(v.getWindowToken(),0);
+                    v.clearFocus();
+                    return true;
+                }
+                else return false;
+            }
         });
 
     }
