@@ -3,22 +3,20 @@ package com.example.integrali;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
-public class Algoritmi {
+class Algoritmi {
 
     private Expression e;
 
-    Algoritmi() {};
-
-    public void setFunction(String f) {
+    void setFunction(String f) {
         e = new ExpressionBuilder(f).variable("x").build();
     }
 
-    public double f(double x) {
+    double f(double x) {
         e.setVariable("x", x);
         return e.evaluate();
     }
 
-    double MetodoTrapezio(double a, double b, int n) {
+    double MetodoTrapezi(double a, double b, int n) {
         double x = a;
         double h = (b-a)/n;
         double s = (f(a)+f(b))/2;
@@ -36,7 +34,6 @@ public class Algoritmi {
         double sd = 0;
         double h = (b-a)/n;
         double fab = (f(a)+f(b));
-        double h2 = 2*h;
         double x = a + h;
 
         for (int i = 1; i<n; i+=2) {

@@ -10,9 +10,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.ExpressionBuilder;
-
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,16 +19,7 @@ public class MainActivity extends AppCompatActivity {
     TextView risultato;
     Spinner spint;
     EditText insFunz;
-    Expression e;
-
-
-    private double f (double x) {
-        //int n = spint.getSelectedItemPosition();
-
-        e.setVariable("x", x);
-        return e.evaluate();
-    }
-
+    Algoritmi algo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -46,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         spint = findViewById(R.id.spint);
         insFunz = findViewById(R.id.insFunz);
 
+        algo = new Algoritmi();
+
 
         calcola.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,10 +46,20 @@ public class MainActivity extends AppCompatActivity {
                 inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
 
-                a = Double.parseDouble(estrA.getText().toString());
-                b = Double.parseDouble(estrB.getText().toString());
-                n = Integer.parseInt(numint.getText().toString());
+                double a = Double.parseDouble(estrA.getText().toString());
+                double b = Double.parseDouble(estrB.getText().toString());
+                int n = Integer.parseInt(numint.getText().toString());
+                String f = insFunz.getText().toString();
 
+                algo.setFunction(f);
+
+                double area;
+
+                switch (spint.getSelectedItemPosition()){
+                    case 0: area=algo.MetodoTrapezi(a,b,n); break;
+                    case 1: area=algo.MetodoSimpson(a,b,n); break;
+                    default: area=0;
+                }
 
                 DecimalFormat df = new DecimalFormat("#.######");
                 risultato.setText(df.format(area));
