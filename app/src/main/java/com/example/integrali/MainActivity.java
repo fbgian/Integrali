@@ -41,14 +41,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                /*
                 InputMethodManager inputManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-
                 inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                 */
+
+                double a,b;
+                int n;
+
+                try {
+                    a = Double.parseDouble(estrA.getText().toString());
+                    b = Double.parseDouble(estrB.getText().toString());
+                    n = Integer.parseInt(numint.getText().toString());
+                } catch (Exception e){
+                    risultato.setText("Inserisci valori validi");
+                    return;
+                }
 
 
-                double a = Double.parseDouble(estrA.getText().toString());
-                double b = Double.parseDouble(estrB.getText().toString());
-                int n = Integer.parseInt(numint.getText().toString());
                 String f = insFunz.getText().toString();
 
                 algo.setFunction(f);
