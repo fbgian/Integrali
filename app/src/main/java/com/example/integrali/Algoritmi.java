@@ -102,8 +102,7 @@ class Algoritmi {
             area=area1;
             h=h/2;
             n*=2;
-            Log.d("n = ", Integer.toString(n));
-            //nit++;
+            //Log.d("n = ", Integer.toString(n));
 
         } while(diff>eps);
         return area;

@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     default: area=0;
                 }
 
-                DecimalFormat df = new DecimalFormat("#.000000");
+                DecimalFormat df = new DecimalFormat("0.000000");
                 risultato.setText(df.format(area));
             }
 
