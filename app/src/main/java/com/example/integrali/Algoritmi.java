@@ -22,7 +22,7 @@ class Algoritmi {
         return e.evaluate();
     }
 
-    double MetodoTrapezi(double a, double b, int n) {
+    double MetodoTrapeziN(double a, double b, int n) {
         double x = a;
         double h = (b-a)/n;
         double s = (f(a)+f(b))/2;
@@ -33,7 +33,7 @@ class Algoritmi {
         return s*h;
     }
 
-    double MetodoSimpson(double a, double b, int n) {
+    double MetodoSimpsonN(double a, double b, int n) {
 
         if ((n%2)==1) n++;
         double sp = 0;
@@ -53,7 +53,16 @@ class Algoritmi {
         return (fab + 4*sd + 2*sp) * (h/3);
     }
 
-    double MetodoSimpsonEpsilon(double a, double b, double eps, int n) {
+
+    double MetodoTrapezi(double a, double b, int prec){
+        int n = (int) Math.pow(10,prec);
+        return MetodoTrapeziN(a,b,n);
+    }
+
+    double MetodoSimpson(double a, double b, int prec) {
+
+        double eps = Math.pow(10,-1*prec);
+        int n = (int) Math.pow(10,prec);
 
         if ((n%2)==1) n++;
 

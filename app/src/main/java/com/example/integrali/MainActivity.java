@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         estrA = findViewById(R.id.estrA);
         estrB = findViewById(R.id.estrB);
         epsilon = findViewById(R.id.epsilon);
-        numint = findViewById(R.id.numint);
         risultato = findViewById(R.id.risultato);
         spint = findViewById(R.id.spint);
         insFunz = findViewById(R.id.insFunz);
@@ -44,32 +43,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                double a,b,eps;
-                String error = "Inserisci valori validi";
-                int n;
+                double a,b;
+                int prec;
 
                 try {
                     a = Double.parseDouble(estrA.getText().toString());
                     b = Double.parseDouble(estrB.getText().toString());
-                    n = Integer.parseInt(numint.getText().toString());
-                    eps = Double.parseDouble(epsilon.getText().toString());
+                    prec = Integer.parseInt(epsilon.getText().toString());
+                    if (prec>6) prec=6;
 
                 } catch (Exception e){
-                    risultato.setText(error);
+                    risultato.setText(getString(R.string.error));
                     return;
                 }
 
-
                 String f = insFunz.getText().toString();
-
                 algo.setFunction(f);
-
                 double area;
 
                 switch (spint.getSelectedItemPosition()){
-                    case 0: area=algo.MetodoTrapezi(a, b, n); break;
-                    case 1: area=algo.MetodoSimpson(a, b, n); break;
-                    case 2: area=algo.MetodoSimpsonEpsilon(a, b, eps, n); break;
+                    case 0: area=algo.MetodoTrapezi(a, b, prec); break;
+                    case 1: area=algo.MetodoSimpson(a, b, prec); break;
                     default: area=0;
                 }
 
@@ -80,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        numint.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        epsilon.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId== EditorInfo.IME_ACTION_DONE){

@@ -1,11 +1,9 @@
 <resources>
     <string name="app_name">Integrali</string>
-    <string name="funzioni_prompt">Scegli un metodo</string>
+    <string name="error">Inserisci valori validi</string>
 
     <string-array name="funzioni">
         <item>Metodo dei Trapezi</item>
         <item>Metodo Simpson</item>
-        <item>Metodo Simpson con Epsilon</item>
-
     </string-array>
 </resources>
