@@ -25,7 +25,7 @@
 
     <EditText
         android:id="@+id/estrA"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -44,16 +44,16 @@
 
     <EditText
         android:id="@+id/estrB"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
         android:hint="b"
         android:inputType="numberDecimal"
-        android:nextFocusDown="@id/numint"
+        android:nextFocusDown="@id/epsilon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.334"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.514"
@@ -62,7 +62,7 @@
 
     <EditText
         android:id="@+id/numint"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -119,6 +119,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="img_integrale"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -126,7 +127,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/integrale"
-        android:contentDescription="img_integrale"
         tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/epsilon"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Epsilon"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@id/numint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514"
+        tools:ignore="Autofill,HardcodedText" />
 
 </android.support.constraint.ConstraintLayout>

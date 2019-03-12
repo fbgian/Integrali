@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     Button calcola;
-    EditText estrA, estrB, numint;
+    EditText estrA, estrB, numint, epsilon;
     TextView risultato;
     Spinner spint;
     EditText insFunz;
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         calcola = findViewById(R.id.calcola);
         estrA = findViewById(R.id.estrA);
         estrB = findViewById(R.id.estrB);
+        epsilon = findViewById(R.id.epsilon);
         numint = findViewById(R.id.numint);
         risultato = findViewById(R.id.risultato);
         spint = findViewById(R.id.spint);
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                double a,b;
+                double a,b,eps;
                 String error = "Inserisci valori validi";
                 int n;
 
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                     a = Double.parseDouble(estrA.getText().toString());
                     b = Double.parseDouble(estrB.getText().toString());
                     n = Integer.parseInt(numint.getText().toString());
+                    eps = Double.parseDouble(epsilon.getText().toString());
+
                 } catch (Exception e){
                     risultato.setText(error);
                     return;
@@ -64,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
                 double area;
 
                 switch (spint.getSelectedItemPosition()){
-                    case 0: area=algo.MetodoTrapezi(a,b,n); break;
-                    case 1: area=algo.MetodoSimpson(a,b,n); break;
+                    case 0: area=algo.MetodoTrapezi(a, b, n); break;
+                    case 1: area=algo.MetodoSimpson(a, b, n); break;
+                    case 2: area=algo.MetodoSimpsonEpsilon(a, b, eps, n); break;
                     default: area=0;
                 }
 

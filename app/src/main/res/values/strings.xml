@@ -5,6 +5,7 @@
     <string-array name="funzioni">
         <item>Metodo dei Trapezi</item>
         <item>Metodo Simpson</item>
+        <item>Metodo Simpson con Epsilon</item>
 
     </string-array>
 </resources>
