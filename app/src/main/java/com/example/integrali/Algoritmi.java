@@ -2,6 +2,8 @@
 
 package com.example.integrali;
 
+import android.util.Log;
+
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
@@ -90,6 +92,7 @@ class Algoritmi {
             area=area1;
             h=h/2;
             n*=2;
+            Log.d("n = ", Integer.toString(n));
             //nit++;
 
         } while(diff>eps);
