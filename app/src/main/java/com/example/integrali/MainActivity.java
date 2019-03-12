@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     Button calcola;
-    EditText estrA, estrB, numint, epsilon;
+    EditText estrA, estrB, epsilon;
     TextView risultato;
     Spinner spint;
     EditText insFunz;

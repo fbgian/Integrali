@@ -22,7 +22,7 @@ class Algoritmi {
         return e.evaluate();
     }
 
-    double MetodoTrapeziN(double a, double b, int n) {
+    private double MetodoTrapeziN(double a, double b, int n) {
         double x = a;
         double h = (b-a)/n;
         double s = (f(a)+f(b))/2;
@@ -33,7 +33,7 @@ class Algoritmi {
         return s*h;
     }
 
-    double MetodoSimpsonN(double a, double b, int n) {
+    /*double MetodoSimpsonN(double a, double b, int n) {
 
         if ((n%2)==1) n++;
         double sp = 0;
@@ -52,6 +52,7 @@ class Algoritmi {
 
         return (fab + 4*sd + 2*sp) * (h/3);
     }
+    */
 
 
     double MetodoTrapezi(double a, double b, int prec){
